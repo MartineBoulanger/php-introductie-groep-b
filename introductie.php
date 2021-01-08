@@ -112,7 +112,7 @@
         <div class="film-grid">
             <?php foreach ($films as $film) { ?>
                 <div class="film">
-                    <h4><?php echo $film ?></h4>
+                    <h2><?php echo $film ?></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, laudantium aliquam sit magni ipsa assumenda aut rem veniam perferendis repellendus?</p>
                 </div>
             <?php } ?>

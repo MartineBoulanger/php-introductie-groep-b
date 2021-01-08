@@ -1,0 +1,269 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.main-nav {
+  background: white;
+  text-transform: uppercase;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 -1rem;
+}
+
+.main-nav ul li {
+  margin: 1rem;
+}
+
+.main-nav ul li:nth-child(2) {
+  margin-left: auto;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: dimgrey;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: orange;
+}
+
+.main-nav ul li:first-child a {
+  color: black;
+  font-family: fantasy;
+}
+
+.banner {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+.banner-content {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,.5);
+  position: relative;
+  z-index: 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-2-col {
+  columns: 2;
+}
+
+.section {
+  padding: 4rem 0 0;
+}
+
+.main-footer {
+  background-color: rgb(45, 45, 45);
+  color: rgb(227, 227, 227);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.main-footer h1 {
+  color: white;
+}
+
+.main-footer .footer-columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -1rem;
+}
+
+.main-footer aside {
+  margin: 0 1rem;
+}
+
+.sitemap ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sitemap a {
+  color: rgb(227, 227, 227);
+  text-decoration: none;
+}
+
+.sitemap a:hover {
+  text-decoration: underline;
+}
+
+.aanbod-container {
+  padding: 2rem 0;
+  background-color: rgb(86, 86, 86);
+  color: white;
+  
+  margin-top: 4rem;
+}
+
+.aanbod-container .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aanbod h1 {
+  margin-bottom: 0;
+}
+
+.aanbod h1 + p {
+  margin-top: 0;
+  color: rgb(190, 190, 190);
+  font-style: italic;
+  font-size: .8em;
+}
+
+.aanbod-price {
+  color: orange;
+}
+
+.aanbod-featurelist {
+  padding: 0 1rem;
+}
+
+.aanbod-primary {
+  font-size: 1.5em;
+}
+
+.cta-button {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.offerte-form {
+  padding: 2rem 0;
+}
+
+.offerte-form input[type="number"] {
+  padding: 1rem;
+  display: block;
+  background-color: rgb(217, 217, 217);
+  border: none;
+  font-size: 2rem;
+}
+
+.offerte-form .formules {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offerte-form .formule {
+  border: 1px solid transparent;
+  padding: 1rem;
+}
+
+.offerte-form .formule:hover {
+  border-color: black;
+}
+
+.offerte-form input[type="radio"] {
+  display: none;
+}
+
+.offerte-form input[type="radio"]:checked + label {
+  /* border-color: black; */
+  background-color: rgb(217, 217, 217);
+}
+
+.offerte-form input[type="submit"] {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.offerte-form input[type="submit"]:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.offerte-uitkomst {
+  margin: 4rem 0;
+  padding: 2rem 0;
+  background-color: rgb(217, 217, 217);
+  font-size: 2em;
+}
+
+.offerte-uitkomst .cta-button {
+  border-color: black;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.message {
+  background-color: rgb(59, 183, 59);
+  color: white;
+  padding: 1rem;
+} 
+
+.contact-form {
+  padding: 2rem 0;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.contact-form input[type='submit'] {
+  cursor: pointer;
+}
+.contact-form input[type='checkbox'] {
+  display: inline;
+  width: auto;
+}
