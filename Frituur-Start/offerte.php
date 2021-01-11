@@ -44,7 +44,10 @@
           </p>
           <p><b>Kies je formule:</b></p>
           <div class="formules">
-          <?php include('./includes/offerte-item.php') ?>
+            <?php $teller = 1; ?>
+          <?php foreach($aanbod as $naam => $item) { ?>
+            <?php include('./includes/offerte-item.php') ?>
+          <?php $teller++; } ?>          
           </div>
           <p class="text-center">
             <input type="submit" value="Berekenen!">

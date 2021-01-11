@@ -21,21 +21,6 @@
 	// --> vaste kost: 320 - (8*50) : -80 eur --> min: 0 eur.
   // totaal: 400 eur.
 
-$kostprijs = [
-  'Formula A' => [
-    'tagline' => 'Heerlijke frietjes! <br> Één snack om van te smullen!',
-    'price' => 5,
-  ],
-  'All-In' => [
-    'tagline' => 'Onze all-you-can-eat knaller!',
-    'price' => 8,
-  ],
-  'Formula B' => [
-    'tagline' => 'Heerlijke frietjes <br> Twee snacks om buikjes mee te vullen!',
-    'price' => 7,
-  ]
-];
-
 $aanbod = [
   'Formula A' => [
     'tagline' => 'Heerlijke frietjes! <br> Één snack om van te smullen!',
