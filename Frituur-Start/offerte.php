@@ -1,7 +1,7 @@
 <?php 
   $banner_img = "images/brandon-morgan-105310-unsplash.jpg"; 
   $banner_text = "Bereken jouw prijs!";
-  $item = include('./aanbod_array.php');
+  include('./aanbod_array.php');
 ?>
 
 <!DOCTYPE html>
@@ -44,9 +44,7 @@
           </p>
           <p><b>Kies je formule:</b></p>
           <div class="formules">
-          <?php
-              include('./includes/offerte-item.php');
-          ?>
+          <?php include('./includes/offerte-item.php') ?>
           </div>
           <p class="text-center">
             <input type="submit" value="Berekenen!">

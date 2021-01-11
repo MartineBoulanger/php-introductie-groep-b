@@ -1,6 +1,11 @@
+<?php
+foreach ($kostprijs as $naam => $item) {
+    include('../aanbod_array.php');
+  }
+?>
 <input name="formule" type="radio" value="formule1" id="formule1">
 <label for="formule1" class="formule">
-    <h2><?php echo $item ?></h2>
+    <h2><?php echo $naam ?></h2>
     <p><?php echo $item['tagline'] ?></p>
     <p>&euro;<?php echo $item['price'] ?> p.p.</p>
 </label>
