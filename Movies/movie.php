@@ -19,7 +19,7 @@
  <?php
   include('./includes/movie_array.php');
   $id = $_GET['id'];
-  $movie_id = $movie($id);
+  //$movie_id = $movies($movie_id, $id);
  ?>
 
  <!DOCTYPE html>
@@ -39,14 +39,16 @@
        <h1><img src="images/marvel-logo.png" alt="Marvel Studios"></h1>
        <p class="text-center"><a href="index.php" class="back-btn">Back to list</a></p>
        
-      <?php 
-        foreach ($movies as $movie) {
-          foreach ($movie as $item) {
-            include('./includes/movie-detail.php');
-            echo print_r($movie_id);
-          }
-        }
-      ?>
+      <!-- <?php 
+        //foreach ($movies as $movie) {
+          //foreach ($movie as $item) {
+            //include('./includes/movie-detail.php');
+            //echo print_r($movie_id);
+          //}
+        //}
+      ?> -->
+      <?php list($movie) = array_values(array_slice($movies, $id, 1)) ?>
+
 
        <section class="relatedMovies">
          <h1 class="relatedMovies-title">Related movies</h1>
