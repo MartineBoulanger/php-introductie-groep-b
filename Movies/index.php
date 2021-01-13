@@ -19,11 +19,12 @@
 
  -->
 <?php
-  include('./includes/movie_array.php');
+include('./includes/movie_array.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +33,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <title>Overzicht - Marvel Movies</title>
 </head>
+
 <body>
   <div class="page-content">
     <div class="container">
@@ -50,6 +52,7 @@
   </div>
 
   <?php include('./includes/footer.php') ?>
-  
+
 </body>
+
 </html>
