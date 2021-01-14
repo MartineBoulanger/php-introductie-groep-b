@@ -16,56 +16,37 @@
     -> Toon de volledige Related movies sectie ENKEL als er gerelateerde films zijn
  -->
 
- <?php
-  include('./includes/movie_array.php');
-  $id = $_GET['id'];
-  //$movie_id = $movies($movie_id, $id);
- ?>
+<?php
+include('./includes/movie_array.php');
+$id = $_GET['id'];
+$movie = $movies[$id];
+?>
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-   <title>Iron Man - Marvel Movies</title>
- </head>
- <body>
- 
-   <div class="page-content">
-     <div class="container">
-       <h1><img src="images/marvel-logo.png" alt="Marvel Studios"></h1>
-       <p class="text-center"><a href="index.php" class="back-btn">Back to list</a></p>
-       
-      <!-- <?php 
-        //foreach ($movies as $movie) {
-          //foreach ($movie as $item) {
-            //include('./includes/movie-detail.php');
-            //echo print_r($movie_id);
-          //}
-        //}
-      ?> -->
-      <?php list($movie) = array_values(array_slice($movies, $id, 1)) ?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <title>Iron Man - Marvel Movies</title>
+</head>
 
-       <section class="relatedMovies">
-         <h1 class="relatedMovies-title">Related movies</h1>
-         <section class="movies">
-          <?php
-            foreach ($movies as $movie => $item) {
-              if (in_array($item['id'], $item['related'])) {
-                include('./includes/moviecard.php');
-              }
-            }
-          ?>
-         </section>
-       </section>
-     </div>
-   </div>
- 
-   <?php include('./includes/footer.php') ?>
-   
- </body>
- </html>
+<body>
+
+  <div class="page-content">
+    <div class="container">
+      <h1><img src="images/marvel-logo.png" alt="Marvel Studios"></h1>
+      <p class="text-center"><a href="index.php" class="back-btn">Back to list</a></p>
+      <?php include('./includes/moviedetails.php') ?>
+      <?php include('./includes/relatedmovies.php') ?>
+    </div>
+  </div>
+
+  <?php include('./includes/footer.php') ?>
+
+</body>
+
+</html>

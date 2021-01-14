@@ -39,14 +39,18 @@ include('./includes/movie_array.php');
     <div class="container">
       <h1><img src="images/marvel-logo.png" alt="Marvel Studios"></h1>
 
-      <div class="movie-sort">
-        <?php include('./includes/sortform.php') ?>
-      </div>
+      <?php include('./includes/sortform.php') ?>
 
       <section class="movies">
-        <?php foreach ($movies as $movie => $item) {
+        <?php
+        if (isset($_GET['sort'])) {
+          $sort = $_GET['sort'];
+          array_multisort(array_column($movies, $sort), SORT_ASC, $movies);
+        }
+        foreach ($movies as $movie) {
           include('./includes/moviecard.php');
-        } ?>
+        }
+        ?>
       </section>
     </div>
   </div>
