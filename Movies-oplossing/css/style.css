@@ -1,0 +1,264 @@
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: rgb(45, 45, 45);
+  line-height: 1.5;
+  background-image: radial-gradient(rgb(133, 15, 3), rgb(53, 5, 0));
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.page-footer {
+  text-align: center;
+  color: white;
+  padding: 4rem;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 4rem 0;
+}
+
+.movieCard {
+  display: flex;
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  position: relative;
+  transition: box-shadow 250ms, transform 250ms ease-out;
+}
+
+.movieCard p {
+  margin: 0;
+}
+
+.movieCard-link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+}
+
+.movieCard-link:hover .movieCard {
+  box-shadow: 0 0 40px rgba(53, 5, 0, 0.552);
+  transform: scale(1.02);
+}
+
+.movieCard-image {
+  position: relative;
+  width: 40%;
+  flex: 1 0 auto;
+}
+
+.movieCard-image::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent 30%);
+}
+
+.movieCard-image img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.movieCard-score {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  color: rgb(231, 199, 20);
+}
+
+.movieCard-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.movieCard-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: black;
+}
+
+.movieCard-review {
+  flex: 1;
+  font-size: .9rem;
+  color: rgb(59, 15, 15);
+}
+
+.movieCard-release {
+  margin-top: 0;
+  margin-bottom: 1rem !important;
+  font-size: .8rem;
+  color: rgb(163, 152, 152)
+}
+
+.movieCard-director {
+  font-style: italic;
+  font-size: .8rem;
+  margin-top: 1rem !important;
+}
+
+.movieCard-reviewCount {
+  background-color: tomato;
+  border-radius: 100%;
+  width: 40px;
+  heighT: 40px;
+  color: white;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  opacity: .5;
+  transition: opacity 250ms;
+}
+
+.movieCard:hover .movieCard-reviewCount {
+  opacity: 1;
+}
+
+.movieCard-reviewCount i {
+  position: absolute;
+  color: white;
+  opacity: .25;
+  font-size: 1.5rem;
+}
+
+.movie-sort {
+  display: flex;
+  justify-content: center;
+}
+
+.sort-form select {
+  margin: 1rem;
+}
+
+.back-btn {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: .7rem 0 .5rem;
+  display: inline-block;
+  transition: 250ms;
+}
+.back-btn:hover {
+  background-color: rgb(255,0,34);
+  border-color: transparent;
+  padding: .7rem .5rem .5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.movieDetail {
+  margin-top: 4rem;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,.6);
+  display: flex;
+}
+
+.movieDetail-image {
+  background: black;
+  width: 40%;
+  flex: 1 0 auto;
+}
+
+.movieDetail-image img {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.movieDetail-content {
+  padding: 1rem;
+}
+
+.movieDetail-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: black;
+}
+
+.movieDetail-header {
+  border-bottom: 4px solid rgb(255,0,34);
+}
+
+.movieDetail-synopsis {
+  color: black;
+}
+
+.movieDetail-score {
+  color: rgb(231, 199, 20);
+  display: flex;
+  font-size: 2rem;
+}
+
+.movieDetail-reviews {
+  border-top: 4px solid rgb(255,0,34);
+}
+
+.movieDetail-reviews-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.movieReview {
+  padding: 1rem;
+  /* border-radius: 10px; */
+  font-family: serif;
+  margin: 0 -1rem;
+}
+
+.movieReview:nth-of-type(even) {
+  background-color: rgb(247, 247, 247);
+}
+
+.movieReview:nth-of-type(odd) {
+  background-color: rgb(240, 240, 240);
+}
+
+
+.relatedMovies {
+  margin-top: 4rem;
+}
+
+.relatedMovies-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+}
